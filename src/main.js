@@ -16,10 +16,10 @@ const products = [
     id: 1,
     name: 'The Haven 3-Seater Sofa',
     category: 'Living Room',
-    desc: 'Upholstered in premium sand beige fabric with a deep walnut frame. Handcrafted for supreme comfort.',
+    desc: 'Upholstered in premium sand beige linen with a deep walnut frame. Handcrafted for supreme comfort.',
     originalPrice: '₹28,999',
     salePrice: '₹24,999',
-    image: '/images/sofa.png',
+    image: '/images/sofa.jpg',
   },
   {
     id: 2,
@@ -28,16 +28,16 @@ const products = [
     desc: 'A statement piece featuring an oversized walnut headboard and meticulous joinery details.',
     originalPrice: '₹22,999',
     salePrice: '₹18,499',
-    image: '/images/sofa.png',
+    image: '/images/bed.jpg',
   },
   {
     id: 3,
     name: 'Kashi Oak Dining Set',
     category: 'Dining',
-    desc: 'Minimalist 6-seater solid oak dining table. Includes beautifully curved chairs with terracotta upholstery.',
+    desc: 'Minimalist 6-seater solid oak dining table. Includes beautifully curved chairs with textured upholstery.',
     originalPrice: '₹42,999',
     salePrice: '₹34,999',
-    image: '/images/sofa.png',
+    image: '/images/dining.jpg',
   },
   {
     id: 4,
@@ -46,29 +46,29 @@ const products = [
     desc: 'Sleek walnut desk with integrated cable management and discreet drawers for a minimal workspace.',
     originalPrice: '₹12,499',
     salePrice: '₹9,799',
-    image: '/images/sofa.png',
+    image: '/images/desk.jpg',
   },
   {
     id: 5,
     name: 'Pebble Coffee Table',
     category: 'Living Room',
-    desc: 'Sculptural organic shaped coffee table in warm sand beige wood tones.',
+    desc: 'Sculptural organic shaped coffee table in warm travertine and solid wood tones.',
     originalPrice: '₹7,999',
     salePrice: '₹5,999',
-    image: '/images/sofa.png',
+    image: '/images/coffee_table.jpg',
   },
   {
     id: 6,
     name: 'Zenith Wardrobe',
     category: 'Bedroom',
-    desc: 'Tall, elegant double wardrobe featuring seamless doors and hidden brass handles.',
+    desc: 'Tall, elegant double wardrobe featuring seamless walnut doors and ambient interior lighting.',
     originalPrice: '₹25,999',
     salePrice: '₹21,499',
-    image: '/images/sofa.png',
+    image: '/images/wardrobe.jpg',
   }
 ];
 
-const categories = ['All', 'Living Room', 'Bedroom', 'Dining', 'Office', 'Outdoor'];
+const categories = ['All', 'Living Room', 'Bedroom', 'Dining', 'Office'];
 
 let activeCategory = 'All';
 let searchQuery = '';
@@ -103,6 +103,7 @@ if (searchInput) {
 }
 
 function renderFilters() {
+  if (!filtersContainer) return;
   filtersContainer.innerHTML = '';
   categories.forEach(cat => {
     const btn = document.createElement('button');
@@ -118,6 +119,7 @@ function renderFilters() {
 }
 
 function renderProducts() {
+  if (!productGrid) return;
   productGrid.innerHTML = '';
   
   let filteredProducts = activeCategory === 'All' 
@@ -141,17 +143,11 @@ function renderProducts() {
   filteredProducts.forEach(product => {
     const card = document.createElement('div');
     card.className = 'product-card';
-    
-    // Compute dynamic style string
-    let imgStyle = '';
-    if (product.id !== 1 && product.id !== 2) {
-      imgStyle = `filter: hue-rotate(${product.id * 40}deg) saturate(1.2);`;
-    }
 
     card.innerHTML = `
       <div class="product-image-container">
         <span class="category-label">${product.category}</span>
-        <img src="${product.image}" alt="${product.name}" style="${imgStyle}" />
+        <img src="${product.image}" alt="${product.name}" loading="lazy" />
       </div>
       <div class="product-info">
         <h3>${product.name}</h3>
