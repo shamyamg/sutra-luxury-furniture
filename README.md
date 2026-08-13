@@ -2,6 +2,11 @@
 
 A modern web application showcase for **Sutra**, an Indian luxury furniture brand featuring sustainably sourced, handcrafted furniture designed for contemporary Indian homes.
 
+🌐 **Live Demo (Render):** [https://sutra-luxury-furniture.onrender.com](https://sutra-luxury-furniture.onrender.com/)  
+⚡ **Live Demo (Vercel):** [https://sutra-luxury-furniture.vercel.app](https://sutra-luxury-furniture.vercel.app/)
+
+---
+
 ## 🌟 Features
 
 - **Curated Pieces Showcase**: Interactive product catalog with categories (Living Room, Bedroom, Dining, Home Office).
@@ -15,6 +20,7 @@ A modern web application showcase for **Sutra**, an Indian luxury furniture bran
 - **HTML5 & CSS3** (Custom Design System with Cormorant Garamond & DM Sans typography)
 - **JavaScript (ES6+)** / React
 - **Lucide Icons**
+- **Node.js & Express** (Production Web Service on Render)
 
 ## 🚀 Getting Started
 
@@ -43,6 +49,11 @@ A modern web application showcase for **Sutra**, an Indian luxury furniture bran
 4. Build for production:
    ```bash
    npm run build
+   ```
+
+5. Run production server:
+   ```bash
+   npm start
    ```
 
 ## 📄 License
