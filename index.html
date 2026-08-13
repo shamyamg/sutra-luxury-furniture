@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Elegant serif display font & clean sans-serif body font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/index.css">
+    <title>Sutra | A Indian Luxury Furniture Brand</title>
+  </head>
+  <body>
+    <!-- Marquee Strip -->
+    <div class="marquee-container">
+      <div class="marquee-content">
+        Free Delivery over ₹15,000 &nbsp; · &nbsp; 5-Year Warranty &nbsp; · &nbsp; Easy EMI &nbsp; · &nbsp; Free Delivery over ₹15,000 &nbsp; · &nbsp; 5-Year Warranty &nbsp; · &nbsp; Easy EMI &nbsp; · &nbsp; Free Delivery over ₹15,000 &nbsp; · &nbsp; 5-Year Warranty &nbsp; · &nbsp; Easy EMI
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Where Every Room Tells a Story</h1>
+        <p>Discover our curated collection of premium, sustainably sourced furniture designed to bring warmth and luxury to your Indian home.</p>
+        <button class="btn-primary" id="explore-btn">
+          Explore Collection <i data-lucide="arrow-right" style="margin-left: 10px;"></i>
+        </button>
+      </div>
+      <div class="hero-image">
+        <img src="/images/hero.png" alt="Luxurious living room interior" />
+      </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+      <div class="feature-item">
+        <i data-lucide="truck" style="width: 32px; height: 32px;"></i>
+        <span>Free Delivery</span>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="wrench" style="width: 32px; height: 32px;"></i>
+        <span>Home Assembly</span>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="leaf" style="width: 32px; height: 32px;"></i>
+        <span>Sustainably Sourced</span>
+      </div>
+      <div class="feature-item">
+        <i data-lucide="shield-check" style="width: 32px; height: 32px;"></i>
+        <span>5-Year Warranty</span>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section class="products-section container" id="shop">
+      <div class="section-header">
+        <h2>Our Curated Pieces</h2>
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; max-width: 600px; margin: 0 auto;">
+          <div class="search-container" style="display: flex; gap: 8px; width: 100%;">
+            <input type="text" id="search-input" placeholder="Search for products, categories..." style="padding: 0.75rem 1rem; border: 1px solid #ddd; border-radius: 8px; flex: 1; font-family: inherit; font-size: 1rem;" />
+            <button id="search-btn" class="btn-primary" style="padding: 0.75rem 1.5rem; border-radius: 8px;">Search</button>
+          </div>
+          <div class="filters" id="filters-container">
+            <!-- Filters injected via JS -->
+          </div>
+        </div>
+      </div>
+
+      <div class="product-grid" id="product-grid">
+        <!-- Products injected via JS -->
+      </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+      <h2>Transform Your Home, Stress-Free.</h2>
+      <p>Experience the luxury of Sutra furniture with our flexible payment options. Enjoy 0% EMI for up to 12 months on all orders above ₹20,000.</p>
+      <a href="#shop" class="btn-light">Shop 0% EMI Offers</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content container">
+        <div class="brand-section">
+          <h3>Sutra.</h3>
+          <p>Elevating Indian homes with warm, luxurious, and mindful spaces since 2018.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="#living">Living Room</a></li>
+            <li><a href="#bedroom">Bedroom</a></li>
+            <li><a href="#dining">Dining Room</a></li>
+            <li><a href="#office">Home Office</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#shipping">Shipping & Returns</a></li>
+            <li><a href="#care">Furniture Care</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <span>&copy; 2026 Sutra Furniture. All rights reserved.</span>
+        <span>Terms of Service | Privacy Policy</span>
+      </div>
+    </footer>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
